@@ -8,7 +8,7 @@ RESET=$(tput sgr0) # Reset color
 display_menu() {
     clear
     echo "${GREEN}VOICE ASSIST MENU${RESET}"
-    echo "code branch: $WYOMING_SATELLITE_SCRIPT_RELEASEWYOMING_SATELLITE_SCRIPT_RELEASE"
+    echo "code branch:${WYOMING_SATELLITE_SCRIPT_RELEASEWYOMING_SATELLITE_SCRIPT_RELEASE}"
     echo "${GREEN}------------------${RESET}"
     echo "${YELLOW}Select an option (use arrow keys to navigate and Enter to select):${RESET}"
     for i in "${!option_labels[@]}"; do
