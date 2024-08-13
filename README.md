@@ -14,11 +14,10 @@ Full Install script, copy this command and run in on your device
 ```bash
 bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/main/scripts/install.sh)"
 ```
-Install menu functions, copy this command and run in on your device    
-```bash
-bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/main/scripts/menu-install.sh)"
-```
 
+![menu](assets/menu.png)  
+
+![menu](assets/select-wakeword.png)  
 ## Reference Links
 * Works with [Home Assistant](https://www.home-assistant.io/integrations/wyoming)
 * Local wake word detection using [Wyoming services](https://github.com/rhasspy/wyoming#wyoming-projects)

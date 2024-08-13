@@ -11,7 +11,6 @@ options=(
     ["Select Wakeword"]='bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/main/scripts/select-wakeword.sh)"'
     ["Show Current Wakeword"]='bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/main/scripts/show-wakeword.sh)"'
     ["Refresh Wakeword List"]='bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/main/scripts/refresh-wakeword-list.sh)"'
-    ["Reinstall menu functions"]='bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/main/scripts/menu-install.sh)"'
 )
 
 # Array of option labels, including the Quit option
@@ -19,7 +18,6 @@ option_labels=("Reload services"
                "Select Wakeword"
                "Show Current Wakeword"
                "Refresh Wakeword List"
-               "Reinstall menu functions"
                "Quit")
 
 
