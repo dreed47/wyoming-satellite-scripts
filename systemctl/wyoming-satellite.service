@@ -1,0 +1,29 @@
+[Unit]
+Description=Wyoming Satellite
+Wants=network-online.target
+After=network-online.target
+Requires=wyoming-openwakeword.service
+Requires=2mic_leds.service
+
+[Service]
+Type=simple
+Environment=HOSTNAME=%H
+ExecStart=/opt/wyoming-satellite/script/run \
+          --name '${HOSTNAME}' \
+          --uri 'tcp://0.0.0.0:10700' \
+          --mic-command 'arecord -D plughw:CARD=seeed2micvoicec,DEV=0 -r 16000 -c 1 -f S16_LE -t raw' \
+          --snd-command 'aplay -D plughw:CARD=seeed2micvoicec,DEV=0 -r 22050 -c 1 -f S16_LE -t raw' \
+          --mic-auto-gain 5 \
+          --mic-noise-suppression 2 \
+          --wake-uri 'tcp://127.0.0.1:10400' \
+          --wake-word-name 'ok_nabu' \
+          --event-uri 'tcp://127.0.0.1:10500' \
+          --awake-wav '/opt/wyoming-satellite/sounds/awake.wav' \
+          --done-wav '/opt/wyoming-satellite/sounds/done.wav' \
+          --timer-finished-wav '/opt/wyoming-satellite/sounds/timer_finished.wav'
+WorkingDirectory=/opt/wyoming-satellite
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=default.target
