@@ -11,7 +11,6 @@ options=(
     ["Select Wakeword"]='bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/scripts/select-wakeword.sh)"'
     ["Show Current Wakeword"]='bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/scripts/show-wakeword.sh)"'
     ["Refresh Wakeword List"]='bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/scripts/refresh-wakeword-list.sh)"'
-    ["Which Code branch"]='echo $WYOMING_SATELLITE_SCRIPT_RELEASE' 
 )
 
 # Array of option labels, including the Quit option
@@ -19,7 +18,6 @@ option_labels=("Reload services"
                "Select Wakeword"
                "Show Current Wakeword"
                "Refresh Wakeword List"
-               "Which Code branch"
                "Quit")
 
 
