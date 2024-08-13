@@ -4,6 +4,8 @@ GREEN=$(tput setaf 2)
 YELLOW=$(tput setaf 3)
 RESET=$(tput sgr0) # Reset color
 
+export WYOMING_SATELLITE_SCRIPT_RELEASE='release'
+
 echo "..."
 echo "..."
 echo "${YELLOW}Updating package lists and perform upgrades...${RESET}"
@@ -65,9 +67,9 @@ sudo mv ~/wyoming-openwakeword /opt
 
 echo "..."
 echo "${YELLOW}Setup services...${RESET}"  
-sudo wget -O /etc/systemd/system/wyoming-satellite.service https://github.com/dreed47/wyoming-satellite-scripts/raw/main/systemctl/wyoming-satellite.service
-sudo wget -O /etc/systemd/system/wyoming-openwakeword.service https://github.com/dreed47/wyoming-satellite-scripts/raw/main/systemctl/wyoming-openwakeword.service
-sudo wget -O /etc/systemd/system/2mic_leds.service https://github.com/dreed47/wyoming-satellite-scripts/raw/main/systemctl/2mic_leds.service
+sudo wget -O /etc/systemd/system/wyoming-satellite.service https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/systemctl/wyoming-satellite.service
+sudo wget -O /etc/systemd/system/wyoming-openwakeword.service https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/systemctl/wyoming-openwakeword.service
+sudo wget -O /etc/systemd/system/2mic_leds.service https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/systemctl/2mic_leds.service
 sudo systemctl daemon-reload
 sudo systemctl enable 2mic_leds.service wyoming-openwakeword.service wyoming-satellite.service
 sudo systemctl start 2mic_leds.service wyoming-openwakeword.service wyoming-satellite.service  
@@ -75,7 +77,7 @@ sudo systemctl start 2mic_leds.service wyoming-openwakeword.service wyoming-sate
 #sudo systemctl status 2mic_leds.service wyoming-openwakeword.service wyoming-satellite.service  
 
 echo "${YELLOW}Downloading bash aliases...${RESET}"
-curl -sSfL https://github.com/dreed47/wyoming-satellite-scripts/raw/main/scripts/.bash_aliases -o ~/.bash_aliases
+curl -sSfL https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/scripts/.bash_aliases -o ~/.bash_aliases
 
 echo " "
 echo "${GREEN}Script execution completed.  Consider rebooting to make sure your system is using the installed speaker drivers. ${RESET}"
