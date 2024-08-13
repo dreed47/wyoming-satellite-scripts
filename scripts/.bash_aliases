@@ -1,7 +1,7 @@
 # Define colors for status messages
 GREEN=$(tput setaf 2)
 YELLOW=$(tput setaf 3)
-RESET=$(tput sgr0) # Reset color
+RESET=$(tput sgr0) # Reset colors
 
 export WYOMING_SATELLITE_SCRIPT_RELEASE='release'
 
