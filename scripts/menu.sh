@@ -3,6 +3,7 @@
 # Load menu functions
 source <(curl -s https://raw.githubusercontent.com/dreed47/wyoming-satellite-scripts/$WYOMING_SATELLITE_SCRIPT_RELEASE/scripts/menu_functions.sh)
 
+
 # Define the menu options and their corresponding commands
 declare -A options
 options=(
