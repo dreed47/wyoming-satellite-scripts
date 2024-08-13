@@ -18,6 +18,7 @@ ExecStart=/opt/wyoming-satellite/script/run \
           --wake-uri 'tcp://127.0.0.1:10400' \
           --wake-word-name 'ok_nabu' \
           --event-uri 'tcp://127.0.0.1:10500' \
+          --mic-seconds-to-mute-after-awake-wav 0.1 \
           --awake-wav '/opt/wyoming-satellite/sounds/awake.wav' \
           --done-wav '/opt/wyoming-satellite/sounds/done.wav' \
           --timer-finished-wav '/opt/wyoming-satellite/sounds/timer_finished.wav'
