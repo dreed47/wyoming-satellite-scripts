@@ -5,7 +5,7 @@ YELLOW=$(tput setaf 3)
 RESET=$(tput sgr0) # Reset color
 
 echo "${YELLOW}Downloading bash aliases...${RESET}"
-curl -sSfL https://github.com/dreed47/wyoming-satellite-scripts/raw/main/scripts/.bash_aliases -o ~/.bash_aliases
+curl -sSfL https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/scripts/.bash_aliases -o ~/.bash_aliases
 
 echo "${YELLOW}Reloading ~/.bashrc...${RESET}"
 source ~/.bashrc
