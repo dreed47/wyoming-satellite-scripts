@@ -65,9 +65,9 @@ sudo mv ~/wyoming-openwakeword /opt
 
 echo "..."
 echo "${YELLOW}Setup services...${RESET}"  
-sudo wget -O /etc/systemd/system/wyoming-satellite.service https://github.com/dreed47/local-echo/raw/main/systemctl/wyoming-satellite.service
-sudo wget -O /etc/systemd/system/wyoming-openwakeword.service https://github.com/dreed47/local-echo/raw/main/systemctl/wyoming-openwakeword.service
-sudo wget -O /etc/systemd/system/2mic_leds.service https://github.com/dreed47/local-echo/raw/main/systemctl/2mic_leds.service
+sudo wget -O /etc/systemd/system/wyoming-satellite.service https://github.com/dreed47/wyoming-satellite-scripts/raw/main/systemctl/wyoming-satellite.service
+sudo wget -O /etc/systemd/system/wyoming-openwakeword.service https://github.com/dreed47/wyoming-satellite-scripts/raw/main/systemctl/wyoming-openwakeword.service
+sudo wget -O /etc/systemd/system/2mic_leds.service https://github.com/dreed47/wyoming-satellite-scripts/raw/main/systemctl/2mic_leds.service
 sudo systemctl daemon-reload
 sudo systemctl enable 2mic_leds.service wyoming-openwakeword.service wyoming-satellite.service
 sudo systemctl start 2mic_leds.service wyoming-openwakeword.service wyoming-satellite.service  
