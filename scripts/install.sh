@@ -74,5 +74,8 @@ sudo systemctl start 2mic_leds.service wyoming-openwakeword.service wyoming-sate
 #sudo systemctl restart 2mic_leds.service wyoming-openwakeword.service wyoming-satellite.service  
 #sudo systemctl status 2mic_leds.service wyoming-openwakeword.service wyoming-satellite.service  
 
+echo "${YELLOW}Downloading bash aliases...${RESET}"
+curl -sSfL https://github.com/dreed47/wyoming-satellite-scripts/raw/main/scripts/.bash_aliases -o ~/.bash_aliases
+
 echo " "
 echo "${GREEN}Script execution completed.  Consider rebooting to make sure your system is using the installed speaker drivers. ${RESET}"

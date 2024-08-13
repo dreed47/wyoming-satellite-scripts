@@ -3,9 +3,11 @@
 Scripts to help install and manage [Wyoming remote voice satellites](https://github.com/rhasspy/wyoming-satellite).
 * Install wyoming-satellite, wyoming-openwakewords, speaker drivers and home assistant wakeword collection in one command
 * Includes defining, enabling and starting systemd services.
-* Optionally install a menu function that will:
-  - Allow you to select your wake word or show your installed wake word  
-  - Allow you to restart all the associated systemd services 
+* Provided menu functions that will:
+  - Select your wake word or show your installed wake word
+  - Refresh wakeword list from github source  
+  - Restart all the associated systemd services  
+  - Initiate menu with the ```m``` or ```menu``` command  
 
 
 Full Install script, copy this command and run in on your device  
