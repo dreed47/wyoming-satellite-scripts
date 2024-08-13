@@ -4,7 +4,7 @@ GREEN=$(tput setaf 2)
 YELLOW=$(tput setaf 3)
 RESET=$(tput sgr0) # Reset color
 
-export WYOMING_SATELLITE_SCRIPT_RELEASE='main'
+export WYOMING_SATELLITE_SCRIPT_RELEASE='release'
 
 echo "..."
 echo "..."
