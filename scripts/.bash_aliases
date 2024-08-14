@@ -1,5 +1,6 @@
 #!/bin/bash
 # Define colors for status messages
+RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
 YELLOW=$(tput setaf 3)
 RESET=$(tput sgr0) # Reset colors
