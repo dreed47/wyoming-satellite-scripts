@@ -6,11 +6,11 @@ Scripts to help install and manage [Wyoming remote voice satellites](https://git
 * Provided menu functions that will allow you to:
   - Select your wake word or show your installed wake word
   - Refresh wakeword list from github source  
-  - Restart all the associated systemd services  
+  - Edit and restart all the associated systemd services  
  * Initiate the menu with the ```m``` or ```menu``` command  
 
 
-Full Install script, copy this command and run in on your device  
+To run the full Install script, copy this command and run on your device  
 ```bash
 bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/release/scripts/install.sh)"
 ```
