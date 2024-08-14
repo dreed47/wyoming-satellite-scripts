@@ -16,7 +16,7 @@ display_menu() {
 
     # Conditionally append the code branch only if it's not 'release'
     if [[ "$WYOMING_SATELLITE_SCRIPT_RELEASE" != "release" ]]; then
-        echo -n " (code branch:$WYOMING_SATELLITE_SCRIPT_RELEASE)"
+        echo -n "${RED} (code branch:$WYOMING_SATELLITE_SCRIPT_RELEASE)"
     fi
 
     # Reset color and move to the next line
