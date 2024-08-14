@@ -10,12 +10,17 @@ RESET=$(tput sgr0) # Reset color
 display_menu() {
     clear
     echo "${GREEN}VOICE ASSIST MENU${RESET}"
-    echo "${GREEN}------------------${RESET}"
 
-    # Conditionally echo the code branch only if it's not 'release'
+    # Print the dashes without a newline
+    echo -n "${GREEN}------------------"
+
+    # Conditionally append the code branch only if it's not 'release'
     if [[ "$WYOMING_SATELLITE_SCRIPT_RELEASE" != "release" ]]; then
-        echo "${RED}(code branch:$WYOMING_SATELLITE_SCRIPT_RELEASE)${RESET}"
+        echo -n " (code branch:$WYOMING_SATELLITE_SCRIPT_RELEASE)"
     fi
+
+    # Reset color and move to the next line
+    echo "${RESET}"
         
     echo "${YELLOW}Select an option (use arrow keys to navigate and Enter to select):${RESET}"
     for i in "${!option_labels[@]}"; do
