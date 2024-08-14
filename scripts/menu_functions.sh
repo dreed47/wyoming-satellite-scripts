@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Define colors for status messages
+RED=$(tput setaf 1)
 GREEN=$(tput setaf 2)
 YELLOW=$(tput setaf 3)
 RESET=$(tput sgr0) # Reset color
@@ -9,7 +10,13 @@ RESET=$(tput sgr0) # Reset color
 display_menu() {
     clear
     echo "${GREEN}VOICE ASSIST MENU${RESET}"
-    echo "${GREEN}------------------${RESET}(code branch:$WYOMING_SATELLITE_SCRIPT_RELEASE)"
+    echo "${GREEN}------------------${RESET}"
+
+    # Conditionally echo the code branch only if it's not 'release'
+    if [[ "$WYOMING_SATELLITE_SCRIPT_RELEASE" != "release" ]]; then
+        echo "${RED}(code branch:$WYOMING_SATELLITE_SCRIPT_RELEASE)${RESET}"
+    fi
+        
     echo "${YELLOW}Select an option (use arrow keys to navigate and Enter to select):${RESET}"
     for i in "${!option_labels[@]}"; do
         if [[ $i -eq $1 ]]; then
