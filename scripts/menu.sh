@@ -16,6 +16,7 @@ options=(
     ["Update service files from github"]='bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/scripts/update-service-files.sh)"'
     ["Reload all services"]='bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/scripts/service-reload.sh)"'
     ["Examine Disk Space"]='sudo ncdu /'
+    ["Reboot"]='sudo reboot'
 )
 
 # Array of option labels, including the Quit option
@@ -29,6 +30,7 @@ option_labels=(
                "Update service files from github"
                "Reload all services"
                "Examine Disk Space"
+               "Reboot"
                "Quit")
 
 
