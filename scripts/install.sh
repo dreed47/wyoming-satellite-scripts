@@ -18,7 +18,8 @@ sudo apt-get install -y --no-install-recommends  \
   python3-venv \
   libopenblas-dev \
   python3-spidev \
-  python3-gpiozero 
+  python3-gpiozero \
+  ncdu
 
 cd ~
 echo "..."
@@ -78,6 +79,9 @@ sudo systemctl start 2mic_leds.service wyoming-openwakeword.service wyoming-sate
 
 echo "${YELLOW}Downloading bash aliases...${RESET}"
 curl -sSfL https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/scripts/.bash_aliases -o ~/.bash_aliases
+
+echo "${YELLOW}Downloading logrotate custom file...${RESET}"
+curl -sSfL https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/logrotate/custom -o /etc/logrotate.d/custom
 
 echo " "
 echo "${GREEN}Script execution completed.  Consider rebooting to make sure your system is using the installed speaker drivers. ${RESET}"
