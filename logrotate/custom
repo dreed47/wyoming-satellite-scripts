@@ -1,5 +1,5 @@
 # ensure logs don't fill up all available disk space
-/var/log/*.log {
+/var/log/syslog /var/log/*.log {
     maxsize 100M
     rotate 4
     compress
