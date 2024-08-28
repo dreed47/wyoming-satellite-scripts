@@ -88,7 +88,7 @@ wget https://dev.yorhel.nl/download/ncdu-2.5-linux-arm.tar.gz
 tar -xzf ncdu-2.5-linux-arm.tar.gz
 rm -rvf ncdu-2.5-linux-arm.tar.gz 
 sudo mv ~/ncdu /usr/bin
-curl -sSfL https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/ncdu/ncdu.conf -o /etc/ncdu.conf
+sudo curl -sSfL https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/ncdu/ncdu.conf -o /etc/ncdu.conf
 
 echo " "
 echo "${GREEN}Script execution completed.  Consider rebooting to make sure your system is using the installed speaker drivers. ${RESET}"
