@@ -14,7 +14,7 @@ mkdir ~/wakewords
 find ~/home-assistant-wakewords-collection -type f -name "*.tflite" -exec mv {} ~/wakewords/ \;
 rm -rvf ~/home-assistant-wakewords-collection
 
-sudo mv -f ~/wakewords /opt
+sudo rm -rf /opt/wakewords && sudo mv -f ~/wakewords /opt
 
 echo " "
 echo "${GREEN}Script execution completed.   ${RESET}"
