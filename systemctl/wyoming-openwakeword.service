@@ -10,8 +10,8 @@ ExecStart=/opt/wyoming-openwakeword/script/run \
 WorkingDirectory=/opt/wyoming-openwakeword
 Restart=always
 RestartSec=1
-StandardOutput=file:/var/log/wyoming.log
-StandardError=file:/var/log/wyoming-error.log
+StandardOutput=file:/var/log/wakeword.log
+StandardError=file:/var/log/wakeword.log
 
 [Install]
 WantedBy=default.target

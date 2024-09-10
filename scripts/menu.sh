@@ -15,6 +15,8 @@ options=(
     ["Edit 2mic_leds service file"]='sudo systemctl edit --force --full 2mic_leds.service'
     ["Update service files from github"]='bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/scripts/update-service-files.sh)"'
     ["Reload all services"]='bash -c "$(wget -qLO - https://github.com/dreed47/wyoming-satellite-scripts/raw/$WYOMING_SATELLITE_SCRIPT_RELEASE/scripts/service-reload.sh)"'
+    ["Tail Wyoming Log"]='tail -f /var/log/wyoming.log'
+    ["Tail Wakeword Log"]='tail -f /var/log/wakeword.log'
     ["Examine Disk Space"]='sudo ncdu /'
     ["Reboot"]='sudo reboot'
 )
@@ -29,6 +31,8 @@ option_labels=(
                "Edit 2mic_leds service file"
                "Update service files from github"
                "Reload all services"
+               "Tail Wyoming Log"
+               "Tail Wakeword Log"
                "Examine Disk Space"
                "Reboot"
                "Quit")

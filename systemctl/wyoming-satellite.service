@@ -26,7 +26,7 @@ WorkingDirectory=/opt/wyoming-satellite
 Restart=always
 RestartSec=1
 StandardOutput=file:/var/log/wyoming.log
-StandardError=file:/var/log/wyoming-error.log
+StandardError=file:/var/log/wyoming.log
 
 [Install]
 WantedBy=default.target
