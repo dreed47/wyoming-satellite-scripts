@@ -5,7 +5,8 @@ Description=Wyoming openWakeWord
 Type=simple
 ExecStart=/opt/wyoming-openwakeword/script/run \
          --uri 'tcp://127.0.0.1:10400' \
-         --custom-model-dir '/opt/wakewords' 
+         --custom-model-dir '/opt/wakewords' \ 
+         --preload-model 'ok_nabu'
 
 WorkingDirectory=/opt/wyoming-openwakeword
 Restart=always

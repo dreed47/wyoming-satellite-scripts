@@ -5,6 +5,7 @@ wakeword_dir="/opt/wakewords"
 
 # Service file to be modified
 service_file="/etc/systemd/system/wyoming-satellite.service"
+wakeword_service_file="/etc/systemd/system/wyoming-openwakeword.service"
 
 # Get the terminal height (number of rows)
 #terminal_height=$(tput lines)
@@ -107,7 +108,8 @@ done
 selected_file="${files[$selected]}"
 wake_word_name="$(basename "$selected_file" | sed 's/\.[^.]*$//')"
 
-# Perform find/replace on the service file
+# Perform find/replace on the service files
 sudo sed -i "s/--wake-word-name '[^']*'/--wake-word-name '$wake_word_name'/" "$service_file"
+sudo sed -i "s/--preload-model '[^']*'/--preload-model '$wake_word_name'/" "$wakeword_service_file"
 
 echo "Updated the wake word in $service_file to $wake_word_name"
