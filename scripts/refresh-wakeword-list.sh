@@ -15,6 +15,7 @@ find ~/home-assistant-wakewords-collection -type f -name "*.tflite" -exec mv {} 
 rm -rvf ~/home-assistant-wakewords-collection
 
 sudo rm -rf /opt/wakewords && sudo mv -f ~/wakewords /opt
+sudo cp /opt/wyoming-openwakeword/wyoming_openwakeword/models/* /opt/wakewords/
 
 echo " "
 echo "${GREEN}Script execution completed.   ${RESET}"

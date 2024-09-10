@@ -7,6 +7,8 @@ ExecStart=/opt/wyoming-satellite/examples/.venv/bin/python3 2mic_service.py --ur
 WorkingDirectory=/opt/wyoming-satellite/examples
 Restart=always
 RestartSec=1
+StandardOutput=file:/var/log/wyoming.log
+StandardError=file:/var/log/wyoming-error.log
 
 [Install]
 WantedBy=default.target
