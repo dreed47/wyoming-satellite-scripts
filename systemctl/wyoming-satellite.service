@@ -22,6 +22,7 @@ ExecStart=/opt/wyoming-satellite/script/run \
           --awake-wav '/opt/wyoming-satellite/sounds/awake.wav' \
           --done-wav '/opt/wyoming-satellite/sounds/done.wav' \
           --timer-finished-wav '/opt/wyoming-satellite/sounds/timer_finished.wav'
+          
 WorkingDirectory=/opt/wyoming-satellite
 Restart=always
 RestartSec=1
