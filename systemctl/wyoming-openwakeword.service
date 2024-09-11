@@ -16,3 +16,4 @@ StandardError=file:/var/log/wakeword.log
 
 [Install]
 WantedBy=default.target
+
