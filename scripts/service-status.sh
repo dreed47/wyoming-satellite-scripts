@@ -9,4 +9,4 @@ echo "${YELLOW}Service status...${RESET}"
 sudo systemctl status 2mic_leds.service wyoming-openwakeword.service wyoming-satellite.service  
 
 echo " "
-echo "${GREEN}done. ${RESET}"
+echo "${GREEN}done.. ${RESET}"
