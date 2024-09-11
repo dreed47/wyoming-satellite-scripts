@@ -6,7 +6,7 @@ RESET=$(tput sgr0) # Reset color
 
 echo "..."
 echo "${YELLOW}Service status...${RESET}"  
-sudo systemctl restart 2mic_leds.service wyoming-openwakeword.service wyoming-satellite.service  
+sudo systemctl status 2mic_leds.service wyoming-openwakeword.service wyoming-satellite.service  
 
 echo " "
 echo "${GREEN}done. ${RESET}"
